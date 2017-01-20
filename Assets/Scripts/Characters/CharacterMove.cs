@@ -251,7 +251,7 @@ public class CharacterMove : MonoBehaviour
 
         //If direction has changed (and does not equal 0), then call changed direction event
         if (inputDirection != oldDirection && direction != 0 && OnChangedDirection != null)
-            OnChangedDirection(direction);
+            OnChangedDirection((direction >= 0 ? 1 : -1));
     }
 
     public void Jump(bool pressed)

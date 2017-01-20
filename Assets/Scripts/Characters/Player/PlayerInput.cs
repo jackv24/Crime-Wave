@@ -28,7 +28,7 @@ public class PlayerInput : MonoBehaviour
             float direction = Mathf.Clamp(Input.GetAxisRaw("Horizontal") + device.DPadX, -1, 1);
 
             if (direction != 0)
-                lastDirection = Mathf.RoundToInt(direction);
+                lastDirection = (direction >= 0 ? 1 : -1);
 
             //Move in input direction
             characterMove.Move(direction);

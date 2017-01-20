@@ -11,8 +11,12 @@ public class CameraFollow : MonoBehaviour
     public bool followY = false;
     public bool followX = true;
 
+    private Vector3 initialPos;
+
     void Start()
     {
+        initialPos = transform.position;
+
         //If there is no target assigned, try and find one
         if(!target)
         {
@@ -30,19 +34,24 @@ public class CameraFollow : MonoBehaviour
         //If there is a target
         if(target)
         {
-            Vector3 pos = transform.position;
-
-            //Smoothly follow target
-            pos = Vector3.Lerp(pos, target.transform.position, followSpeed * Time.deltaTime);
+            Vector3 pos = target.transform.position;
             //Do not follow on Z (since it's 2D)
             pos.z = transform.position.z;
 
             if (!followY)
-                pos.y = transform.position.y;
+                pos.y = initialPos.y;
             if (!followX)
-                pos.x = transform.position.x;
+                pos.x = initialPos.x;
 
-            transform.position = pos;
+            transform.position = Vector3.Lerp(transform.position, pos, followSpeed * Time.deltaTime);
         }
+    }
+
+    void CameraShake(float amount)
+    {
+        Vector2 dir = new Vector2(Random.Range(-1, 1f), Random.Range(-1, 1f));
+        dir.Normalize();
+
+        transform.position += (Vector3)(dir * amount);
     }
 }

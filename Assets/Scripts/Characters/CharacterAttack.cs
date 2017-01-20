@@ -5,33 +5,36 @@ using UnityEditor;
 public class CharacterAttack : MonoBehaviour
 {
     public float attackRadius = 2f;
+    public Vector2 attackOffset = Vector2.right;
 
     public float explosionForce = 10f;
 
-    public void Attack(int direction)
+    public void Attack(float direction)
     {
-        Debug.Log("Attacking " + direction);
-
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll((Vector2)transform.position + new Vector2(attackOffset.x * direction, attackOffset.y), attackRadius);
 
         foreach(Collider2D col in colliders)
         {
             if (col.tag == "Damageable")
             {
-                Debug.Log("Knocked");
-
                 Rigidbody2D body = col.GetComponent<Rigidbody2D>();
 
                 Vector2 dir = (col.transform.position - transform.position).normalized;
 
                 body.AddForceAtPosition(dir * explosionForce, transform.position, ForceMode2D.Impulse);
                 body.AddTorque(direction > 0 ? 5 : -5, ForceMode2D.Impulse);
+
+                DamageableObject o = col.GetComponent<DamageableObject>();
+
+                if (o)
+                    o.Destroy(dir.x);
             }
         }
     }
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        if(!Application.isPlaying)
+            Gizmos.DrawWireSphere(transform.position + (Vector3)attackOffset, attackRadius);
     }
 }

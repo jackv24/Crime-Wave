@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 1000010302635750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 8, z: 1}
+  m_LocalScale: {x: 5, y: 10, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013705099042}
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.6, y: 1.25}
 --- !u!114 &114000010392070956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a10bccbde8b01a42be8b9e352a991f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 1
+  attackRadius: 0.75
+  attackOffset: {x: 0.5, y: 0}
+  explosionForce: 10
 --- !u!114 &114000012987570038
 MonoBehaviour:
   m_ObjectHideFlags: 1
