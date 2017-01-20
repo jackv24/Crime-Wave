@@ -217,7 +217,7 @@ Prefab:
     - target: {fileID: 114000010705669758, guid: d9065f2f39fc8e94f9bc8a6386014ebb,
         type: 2}
       propertyPath: cameraShake
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9065f2f39fc8e94f9bc8a6386014ebb, type: 2}
@@ -516,21 +516,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
-        type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.28676468
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
-        type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.28676468
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
-        type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.28676468
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f0573ac6ba49754b9d348ac51fe771e, type: 2}
   m_IsPrefabParent: 0
@@ -627,7 +612,7 @@ Prefab:
     - target: {fileID: 114000010705669758, guid: d9065f2f39fc8e94f9bc8a6386014ebb,
         type: 2}
       propertyPath: cameraShake
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9065f2f39fc8e94f9bc8a6386014ebb, type: 2}
@@ -674,7 +659,7 @@ Prefab:
     - target: {fileID: 114000010705669758, guid: d9065f2f39fc8e94f9bc8a6386014ebb,
         type: 2}
       propertyPath: cameraShake
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9065f2f39fc8e94f9bc8a6386014ebb, type: 2}

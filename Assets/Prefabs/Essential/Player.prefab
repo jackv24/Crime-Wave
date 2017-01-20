@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 0.75
-  attackOffset: {x: 0.5, y: 0}
+  attackOffset: {x: 0.5, y: 0.8}
   explosionForce: 10
 --- !u!114 &114000012987570038
 MonoBehaviour:
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetGraphic: {fileID: 1000010930944860}
+  animator: {fileID: 95000014010535264}
 --- !u!114 &114000013762748410
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ public class CharacterAnimator : MonoBehaviour
     public GameObject targetGraphic;
 
     private CharacterMove characterMove;
+    public Animator animator;
 
     void Start()
     {
@@ -19,6 +20,26 @@ public class CharacterAnimator : MonoBehaviour
                 scale.x = direction;
                 targetGraphic.transform.localScale = scale;
             };
+        }
+    }
+
+    void Update()
+    {
+        if (animator)
+        {
+            if (characterMove)
+            {
+                animator.SetFloat("speed", Mathf.Abs(characterMove.velocity.x));
+                animator.SetBool("isGrounded", characterMove.isGrounded);
+            }
+        }
+    }
+
+    public void Attack()
+    {
+        if(animator)
+        {
+            animator.SetTrigger("attack");
         }
     }
 }

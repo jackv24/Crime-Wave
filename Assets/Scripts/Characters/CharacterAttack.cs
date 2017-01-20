@@ -9,6 +9,13 @@ public class CharacterAttack : MonoBehaviour
 
     public float explosionForce = 10f;
 
+    private CharacterAnimator characterAnimator;
+
+    void Awake()
+    {
+        characterAnimator = GetComponent<CharacterAnimator>();
+    }
+
     public void Attack(float direction)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll((Vector2)transform.position + new Vector2(attackOffset.x * direction, attackOffset.y), attackRadius);
@@ -30,6 +37,9 @@ public class CharacterAttack : MonoBehaviour
                     o.Destroy(dir.x);
             }
         }
+
+        if (characterAnimator)
+            characterAnimator.Attack();
     }
 
     void OnDrawGizmosSelected()
