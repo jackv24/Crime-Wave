@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
 
     private CharacterMove characterMove;
     private CharacterAttack characterAttack;
+    private CharacterStats characterStats;
 
     private int lastDirection = 1;
 
@@ -15,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     {
         characterMove = GetComponent<CharacterMove>();
         characterAttack = GetComponent<CharacterAttack>();
+        characterStats = GetComponent<CharacterStats>();
     }
 
     void Update()
@@ -26,6 +28,9 @@ public class PlayerInput : MonoBehaviour
         {
             //Get input direction (clamped)
             float direction = Mathf.Clamp(Input.GetAxisRaw("Horizontal") + device.DPadX, -1, 1);
+
+            if (characterStats && characterStats.isHidden)
+                direction = 0;
 
             if (direction != 0)
                 lastDirection = (direction >= 0 ? 1 : -1);
@@ -45,6 +50,14 @@ public class PlayerInput : MonoBehaviour
         {
             if (Input.GetButtonDown("Submit") || device.Action3.WasPressed)
                 characterAttack.Attack(lastDirection);
+        }
+
+        if(characterStats)
+        {
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || device.DPadUp.WasPressed)
+                characterStats.Hide();
+            else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || device.DPadUp.WasReleased)
+                characterStats.UnHide();
         }
     }
 }

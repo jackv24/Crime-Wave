@@ -42,4 +42,9 @@ public class CharacterAnimator : MonoBehaviour
             animator.SetTrigger("attack");
         }
     }
+
+    public void SetHidden(bool value)
+    {
+        animator.SetBool("isHidden", value);
+    }
 }

@@ -24,12 +24,7 @@ public class CharacterAttack : MonoBehaviour
         {
             if (col.tag == "Damageable")
             {
-                Rigidbody2D body = col.GetComponent<Rigidbody2D>();
-
                 Vector2 dir = (col.transform.position - transform.position).normalized;
-
-                body.AddForceAtPosition(dir * explosionForce, transform.position, ForceMode2D.Impulse);
-                body.AddTorque(direction > 0 ? 5 : -5, ForceMode2D.Impulse);
 
                 DamageableObject o = col.GetComponent<DamageableObject>();
 

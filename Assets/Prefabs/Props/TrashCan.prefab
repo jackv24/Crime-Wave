@@ -66,8 +66,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010623243114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1.35, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -117,7 +117,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 198000011528689270}
-  cameraShake: 0.5
+  explosionRadius: 1
+  explosionForce: 2
+  maxTorque: 10
+  destructionLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  cameraShake: 0.4
 --- !u!198 &198000011528689270
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1909,7 +1915,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c3c23333c40681042a97b9227564853e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1923,7 +1929,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1848587515
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0c31f99341e574e4ca67166d4c7147b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
