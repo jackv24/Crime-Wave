@@ -7,10 +7,14 @@ public class PlayerInput : MonoBehaviour
     private InputDevice device;
 
     private CharacterMove characterMove;
+    private CharacterAttack characterAttack;
+
+    private int lastDirection = 1;
 
     void Awake()
     {
         characterMove = GetComponent<CharacterMove>();
+        characterAttack = GetComponent<CharacterAttack>();
     }
 
     void Update()
@@ -23,6 +27,9 @@ public class PlayerInput : MonoBehaviour
             //Get input direction (clamped)
             float direction = Mathf.Clamp(Input.GetAxisRaw("Horizontal") + device.DPadX, -1, 1);
 
+            if (direction != 0)
+                lastDirection = Mathf.RoundToInt(direction);
+
             //Move in input direction
             characterMove.Move(direction);
 
@@ -32,6 +39,12 @@ public class PlayerInput : MonoBehaviour
             //Released jump
             else if (Input.GetButtonUp("Jump") || device.Action1.WasReleased)
                 characterMove.Jump(false);
+        }
+
+        if (characterAttack)
+        {
+            if (Input.GetButtonDown("Submit") || device.Action3.WasPressed)
+                characterAttack.Attack(lastDirection);
         }
     }
 }

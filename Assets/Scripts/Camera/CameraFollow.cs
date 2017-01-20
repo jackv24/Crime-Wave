@@ -8,6 +8,9 @@ public class CameraFollow : MonoBehaviour
     [Space()]
     public float followSpeed = 10f;
 
+    public bool followY = false;
+    public bool followX = true;
+
     void Start()
     {
         //If there is no target assigned, try and find one
@@ -33,6 +36,11 @@ public class CameraFollow : MonoBehaviour
             pos = Vector3.Lerp(pos, target.transform.position, followSpeed * Time.deltaTime);
             //Do not follow on Z (since it's 2D)
             pos.z = transform.position.z;
+
+            if (!followY)
+                pos.y = transform.position.y;
+            if (!followX)
+                pos.x = transform.position.x;
 
             transform.position = pos;
         }
