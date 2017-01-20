@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: f8a34c658f168064f80cd88fa74a59c7
+timeCreated: 1484939586
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Crack01
+    21300002: Crack02
+    21300004: Sign01
+    21300006: Sign02
+    21300008: Roof01
+    21300010: Crack03
+    21300012: Sign03
+    21300014: Sign04
+    21300016: Crack04
+    21300018: Crack05
+    21300020: Window01
+    21300022: Window02
+    21300024: WindowShutter
+    21300026: RollerDoor01
+    21300028: WoodenDoor
+    21300030: DoubleWindow01
+    21300032: RoofBeam01
+    21300034: Tree01
+    21300036: RollerShutter
+    21300038: RoofBeam02
+    21300040: BGSheet01_20
+    21300042: Tree02
+    21300044: WallBarrier01
+    21300046: Fence01
+    21300048: Bush01
+    21300050: Bush02
+    21300052: WoodenFence01
+    21300054: Fence02
+    21300056: StobyPole01
+    21300058: PowerLines01
+    21300060: BGSheet01_30
+    21300062: BrickWallEdge01
+    21300064: BrickWallEdge02
+    21300066: BrickWall01
+    21300068: ConcreteWall01
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crack01
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1758
+        width: 123
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Crack02
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1854
+        width: 158
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sign01
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1834
+        width: 671
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sign02
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 1840
+        width: 671
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Roof01
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1669
+        width: 995
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Crack03
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1701
+        width: 130
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sign03
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1670
+        width: 670
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sign04
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1674
+        width: 671
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Crack04
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1503
+        width: 122
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Crack05
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1491
+        width: 158
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Window01
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1436
+        width: 175
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Window02
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1429
+        width: 195
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WindowShutter
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1420
+        width: 200
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RollerDoor01
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 1328
+        width: 199
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WoodenDoor
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1339
+        width: 189
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DoubleWindow01
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1332
+        width: 335
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RoofBeam01
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1475
+        width: 901
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tree01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 734
+        width: 396
+        height: 625
+      alignment: 9
+      pivot: {x: 0.51958823, y: 0.036652345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RollerShutter
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1330
+        width: 200
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RoofBeam02
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1345
+        width: 891
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BGSheet01_20
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1333
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tree02
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 753
+        width: 317
+        height: 498
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WallBarrier01
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1064
+        width: 722
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fence01
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 1002
+        width: 634
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bush01
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 753
+        width: 152
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bush02
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 746
+        width: 158
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WoodenFence01
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 806
+        width: 443
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fence02
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 642
+        width: 634
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StobyPole01
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 34
+        width: 194
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PowerLines01
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 552
+        width: 868
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BGSheet01_30
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 566
+        width: 943
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BrickWallEdge01
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 22
+        width: 57
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BrickWallEdge02
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 19
+        width: 57
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BrickWall01
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 0
+        width: 1028
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ConcreteWall01
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 16
+        width: 1025
+        height: 463
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
