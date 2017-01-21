@@ -16,7 +16,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - Destructable
   - Platforms
   - 
   - 
@@ -51,6 +51,6 @@ TagManager:
   - name: Player
     uniqueID: 50893349
     locked: 0
-  - name: Foreground
-    uniqueID: 148490605
+  - name: Effects
+    uniqueID: 1342714709
     locked: 0
