@@ -29,6 +29,8 @@ public class HUDControl : MonoBehaviour
         }
 
         UpdateStars();
+
+        statsTarget.OnStarLevelChange += UpdateStars;
     }
 
     public void UpdateStars()

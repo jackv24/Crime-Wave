@@ -8,10 +8,8 @@ public class CameraFollow : MonoBehaviour
     [Space()]
     public float followSpeed = 10f;
 
-    public bool followY = false;
-    public bool followX = true;
-
     private Vector3 initialPos;
+    private float oldXPos = 0;
 
     void Start()
     {
@@ -37,11 +35,12 @@ public class CameraFollow : MonoBehaviour
             Vector3 pos = target.transform.position;
             //Do not follow on Z (since it's 2D)
             pos.z = transform.position.z;
+            pos.y = initialPos.y;
 
-            if (!followY)
-                pos.y = initialPos.y;
-            if (!followX)
-                pos.x = initialPos.x;
+            if (pos.x < oldXPos)
+                pos.x = oldXPos;
+            else
+                oldXPos = pos.x;
 
             transform.position = Vector3.Lerp(transform.position, pos, followSpeed * Time.deltaTime);
         }

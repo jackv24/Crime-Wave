@@ -87,8 +87,6 @@ public class CharacterMove : MonoBehaviour
 
             float distance = Vector3.Distance(start, hit.point);
 
-            Debug.Log(distance);
-
             if (distance <= groundedDistance)
                 isGrounded = true;
             else
@@ -136,6 +134,12 @@ public class CharacterMove : MonoBehaviour
         //Horizontal movement
         if (canMove)
             velocity.x = Mathf.Lerp(velocity.x, moveSpeed * inputDirection, acceleration * Time.deltaTime);
+
+        //Player can not leave camera from left (camera doesn't move left)
+        float leftCameraPoint = Camera.main.transform.position.x - (Camera.main.orthographicSize * Screen.width / Screen.height);
+
+        if (transform.position.x < leftCameraPoint && velocity.x < 0)
+            velocity.x = 0;
 
         //Move character by velocity
         //transform.Translate(velocity * Time.deltaTime);

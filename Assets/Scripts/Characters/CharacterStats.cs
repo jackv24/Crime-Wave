@@ -3,6 +3,10 @@ using System.Collections;
 
 public class CharacterStats : MonoBehaviour
 {
+    public delegate void NormalEvent();
+
+    public event NormalEvent OnStarLevelChange;
+
     public int maxStars = 5;
     public int currentStars = 0;
 
@@ -16,6 +20,17 @@ public class CharacterStats : MonoBehaviour
     void Awake()
     {
         characterAnimator = GetComponent<CharacterAnimator>();
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            currentStars++;
+
+            if (OnStarLevelChange != null)
+                OnStarLevelChange();
+        }
     }
 
     public void Hide()
