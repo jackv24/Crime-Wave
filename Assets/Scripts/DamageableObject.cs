@@ -5,14 +5,22 @@ public class DamageableObject : MonoBehaviour
 {
     public int respectValue = 10;
 
+    [Space()]
     public ParticleSystem particleEffect;
 
     public GameObject brokenVersion;
 
+    [Space()]
+    public AudioSource breakSoundSource;
+    public float minPitchBend = -0.1f;
+    public float maxPitchBend = 0.1f;
+
+    [Space()]
     public float explosionRadius = 2f;
     public float explosionForce = 5f;
     public float maxTorque = 45f;
 
+    [Space()]
     public float cameraShake = 2f;
 
     public void Destroy(float direction, CharacterStats stats)
@@ -34,6 +42,16 @@ public class DamageableObject : MonoBehaviour
         if(brokenVersion)
         {
             Instantiate(brokenVersion, transform.position, Quaternion.identity);
+        }
+
+        if(breakSoundSource)
+        {
+            breakSoundSource.transform.SetParent(null);
+
+            breakSoundSource.pitch += Random.Range(minPitchBend, maxPitchBend);
+            breakSoundSource.Play();
+
+            Destroy(breakSoundSource, breakSoundSource.clip.length);
         }
 
         Camera.main.SendMessage("CameraShake", cameraShake);

@@ -11,11 +11,13 @@ public class CharacterAttack : MonoBehaviour
 
     private CharacterAnimator characterAnimator;
     private CharacterStats characterStats;
+    private CharacterSound characterSound;
 
     void Awake()
     {
         characterAnimator = GetComponent<CharacterAnimator>();
         characterStats = GetComponent<CharacterStats>();
+        characterSound = GetComponent<CharacterSound>();
     }
 
     public void Attack(float direction)
@@ -37,6 +39,9 @@ public class CharacterAttack : MonoBehaviour
 
         if (characterAnimator)
             characterAnimator.Attack();
+
+        if (characterSound)
+            characterSound.PlayRandomAttack();
     }
 
     void OnDrawGizmosSelected()

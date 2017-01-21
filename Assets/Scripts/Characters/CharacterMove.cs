@@ -62,6 +62,8 @@ public class CharacterMove : MonoBehaviour
     private Rect box;
     private Rigidbody2D body;
 
+    private CharacterSound characterSound;
+
     [HideInInspector]
     public Vector2 velocity;
 
@@ -70,6 +72,7 @@ public class CharacterMove : MonoBehaviour
         //Get references
         col = GetComponent<Collider2D>();
         body = GetComponent<Rigidbody2D>();
+        characterSound = GetComponent<CharacterSound>();
     }
 
     private void Update()
@@ -153,6 +156,11 @@ public class CharacterMove : MonoBehaviour
         oldDirection = inputDirection;
 
         inputDirection = direction;
+
+        if (inputDirection != 0)
+            characterSound.PlayWalkSound();
+        else
+            characterSound.StopWalkSound();
 
         //If direction has changed (and does not equal 0), then call changed direction event
         if (inputDirection != oldDirection && direction != 0 && OnChangedDirection != null)
