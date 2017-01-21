@@ -63,17 +63,17 @@ public class CameraFollow : MonoBehaviour
 
         transform.position += (Vector3)(dir * shakeAmount);
 
-        StartCoroutine("ScreenZoom");
+        StartCoroutine("ScreenZoom", shakeAmount);
     }
 
-    IEnumerator ScreenZoom()
+    IEnumerator ScreenZoom(float shakeAmount)
     {
         float duration = 0.1f;
         float timeElapsed = 0f;
 
         while (timeElapsed <= duration)
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, cam.orthographicSize - 0.05f, timeElapsed / duration);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, cam.orthographicSize - shakeAmount / 2, timeElapsed / duration);
 
             yield return new WaitForEndOfFrame();
             timeElapsed += Time.deltaTime;

@@ -118,10 +118,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respectValue: 15
   particleEffect: {fileID: 198000013184125690}
+  brokenVersion: {fileID: 0}
   explosionRadius: 1
   explosionForce: 2
   maxTorque: 10
-  cameraShake: 0.4
+  cameraShake: 0.15
 --- !u!198 &198000013184125690
 ParticleSystem:
   m_ObjectHideFlags: 1
