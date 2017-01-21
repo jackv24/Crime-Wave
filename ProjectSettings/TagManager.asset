@@ -45,6 +45,9 @@ TagManager:
   - name: Ground
     uniqueID: 35545955
     locked: 0
+  - name: BackgroundProps
+    uniqueID: 1415007083
+    locked: 0
   - name: Props
     uniqueID: 2446379781
     locked: 0
@@ -53,4 +56,7 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 1342714709
+    locked: 0
+  - name: Foreground
+    uniqueID: 2254875117
     locked: 0
