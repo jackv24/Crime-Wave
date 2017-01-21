@@ -17,6 +17,8 @@ public class HUDControl : MonoBehaviour
     public Text respectText;
     private string respectTextString;
 
+    public GameObject arrestedImage;
+
     void Start()
     {
         starImages.Add(starImage.GetComponent<Image>());
@@ -43,6 +45,14 @@ public class HUDControl : MonoBehaviour
             statsTarget.OnRespectChange += delegate (int value)
             {
                 respectText.text = string.Format(respectTextString, value);
+            };
+        }
+
+        if(arrestedImage)
+        {
+            GameManager.Instance.OnGameEnd += delegate ()
+            {
+                arrestedImage.SetActive(true);
             };
         }
     }

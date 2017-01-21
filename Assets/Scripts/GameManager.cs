@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public delegate void StandardEvent();
     public event StandardEvent OnStarLevelChange;
+    public event StandardEvent OnGameEnd;
 
     public static GameManager Instance;
 
@@ -28,6 +30,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject policeCarPrefab;
 
+    private bool firstCarSpawned = false;
+
+    public float restartGameTime = 5f;
+
+    public bool isGameRunning = true;
+
     void Awake()
     {
         if (Instance == null)
@@ -49,7 +57,11 @@ public class GameManager : MonoBehaviour
         if (characterStats)
             characterStats.OnRespectChange += RespectChange;
 
-        StartCoroutine("UpdatePolice");
+        OnStarLevelChange += delegate ()
+        {
+            StopCoroutine("UpdatePolice");
+            StartCoroutine("UpdatePolice", starLevel);
+        };
     }
 
     void RespectChange(int value)
@@ -69,7 +81,6 @@ public class GameManager : MonoBehaviour
     {
         if(starLevel > 0)
         {
-
             starLevel--;
 
             if (starLevel > 0)
@@ -83,39 +94,38 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        Debug.Log("Busted! Game Over!");
-        Time.timeScale = 0;
+        OnGameEnd();
+
+        isGameRunning = false;
+
+        StartCoroutine("ReloadLevel", restartGameTime);
     }
 
-    IEnumerator UpdatePolice()
+    IEnumerator ReloadLevel(float delay)
     {
-        float nextTime = 0;
-        int lastStar = 0;
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator UpdatePolice(int star)
+    {
+        StarLevels level = starLevels[star];
 
         while (true)
         {
-            if(starLevel != lastStar)
-            {
-                lastStar = starLevel;
-                nextTime = Time.time;
-            }
+            float time = firstCarSpawned ? Random.Range(1f, level.patrolInterval) : 0;
 
-            if (starLevel < starLevels.Length && starLevel > 0)
-            {
-                if (Time.time >= nextTime)
-                {
-                    PoliceCar police = ((GameObject)Instantiate(policeCarPrefab, policeCarPrefab.transform.position, policeCarPrefab.transform.localRotation)).GetComponent<PoliceCar>();
+            yield return new WaitForSeconds(time);
 
-                    police.moveSpeed = starLevels[starLevel].policeSpeed;
+            PoliceCar police = ((GameObject)Instantiate(policeCarPrefab, policeCarPrefab.transform.position, policeCarPrefab.transform.localRotation)).GetComponent<PoliceCar>();
 
-                    float spawnX = characterStats.gameObject.transform.position.x - (police.moveSpeed * starLevels[starLevel].warningTime);
-                    police.gameObject.transform.position = new Vector3(spawnX, police.gameObject.transform.position.y, police.gameObject.transform.position.z);
-                }
+            police.moveSpeed = starLevels[starLevel].policeSpeed;
 
-                nextTime = starLevels[starLevel].patrolInterval + Time.time;
-            }
+            float spawnX = characterStats.gameObject.transform.position.x - (police.moveSpeed * starLevels[starLevel].warningTime);
+            police.gameObject.transform.position = new Vector3(spawnX, police.gameObject.transform.position.y, police.gameObject.transform.position.z);
 
-            yield return new WaitForEndOfFrame();
+            firstCarSpawned = true;
         }
     }
 }
