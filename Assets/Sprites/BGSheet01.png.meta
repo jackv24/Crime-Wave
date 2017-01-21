@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f8a34c658f168064f80cd88fa74a59c7
-timeCreated: 1484939586
+timeCreated: 1484957105
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -38,7 +38,7 @@ TextureImporter:
     21300062: BrickWallEdge01
     21300064: BrickWallEdge02
     21300066: BrickWall01
-    21300068: ConcreteWall01
+    21300068: ConcreteWall01a
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -361,7 +361,7 @@ TextureImporter:
         width: 29
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -535,7 +535,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ConcreteWall01
+      name: ConcreteWall01a
       rect:
         serializedVersion: 2
         x: 1849
