@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HideRegion : MonoBehaviour
 {
-    private CharacterStats stats;
+    public CharacterStats stats;
 
     void OnTriggerEnter2D(Collider2D col)
     {

@@ -5846,7 +5846,23 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 298491553}
-    m_RemovedComponents: []
+    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012400728468, guid: 8f0573ac6ba49754b9d348ac51fe771e,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 81000012917769012, guid: 8f0573ac6ba49754b9d348ac51fe771e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8f0573ac6ba49754b9d348ac51fe771e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &917035106
@@ -9786,6 +9802,18 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011728794208, guid: d9065f2f39fc8e94f9bc8a6386014ebb,
     type: 2}
   m_PrefabInternal: {fileID: 1562547371}
+--- !u!1 &1564793734 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010377070804, guid: cf5de8b8b919a214183655e06f02c732,
+    type: 2}
+  m_PrefabInternal: {fileID: 285681266}
+--- !u!81 &1564793743
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564793734}
+  m_Enabled: 1
 --- !u!1001 &1576604079
 Prefab:
   m_ObjectHideFlags: 0

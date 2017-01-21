@@ -27,8 +27,6 @@ public class CharacterStats : MonoBehaviour
             isHidden = true;
 
             characterAnimator.SetHidden(true);
-
-            GameManager.Instance.RemoveStar();
         }
     }
 

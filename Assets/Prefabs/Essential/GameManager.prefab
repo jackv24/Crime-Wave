@@ -53,25 +53,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStats: {fileID: 0}
   starLevels:
-  - respectNeeded: 50
+  - respectNeeded: 250
     warningTime: 8
     policeSpeed: 2
     patrolInterval: 60
-  - respectNeeded: 100
+  - respectNeeded: 500
     warningTime: 6
     policeSpeed: 5
     patrolInterval: 50
-  - respectNeeded: 200
+  - respectNeeded: 1000
     warningTime: 4
     policeSpeed: 10
     patrolInterval: 40
-  - respectNeeded: 500
+  - respectNeeded: 2000
     warningTime: 3
     policeSpeed: 15
     patrolInterval: 30
-  - respectNeeded: 1000
+  - respectNeeded: 3000
     warningTime: 2
     policeSpeed: 20
     patrolInterval: 20
   starLevel: 0
-  chanceRemoveStar: 0
+  policeCarPrefab: {fileID: 1000011658454998, guid: 791c2ce843838474ea31ef23287f1ecd,
+    type: 2}

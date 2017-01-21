@@ -26,8 +26,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int starLevel = 0;
 
-    [HideInInspector]
-    public bool chanceRemoveStar = false;
+    public GameObject policeCarPrefab;
 
     void Awake()
     {
@@ -49,6 +48,8 @@ public class GameManager : MonoBehaviour
 
         if (characterStats)
             characterStats.OnRespectChange += RespectChange;
+
+        StartCoroutine("UpdatePolice");
     }
 
     void RespectChange(int value)
@@ -66,9 +67,8 @@ public class GameManager : MonoBehaviour
 
     public void RemoveStar()
     {
-        if(chanceRemoveStar && starLevel > 0)
+        if(starLevel > 0)
         {
-            chanceRemoveStar = false;
 
             starLevel--;
 
@@ -78,6 +78,44 @@ public class GameManager : MonoBehaviour
                 respectGained = 0;
 
             OnStarLevelChange();
+        }
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("Busted! Game Over!");
+        Time.timeScale = 0;
+    }
+
+    IEnumerator UpdatePolice()
+    {
+        float nextTime = 0;
+        int lastStar = 0;
+
+        while (true)
+        {
+            if(starLevel != lastStar)
+            {
+                lastStar = starLevel;
+                nextTime = Time.time;
+            }
+
+            if (starLevel < starLevels.Length && starLevel > 0)
+            {
+                if (Time.time >= nextTime)
+                {
+                    PoliceCar police = ((GameObject)Instantiate(policeCarPrefab, policeCarPrefab.transform.position, policeCarPrefab.transform.localRotation)).GetComponent<PoliceCar>();
+
+                    police.moveSpeed = starLevels[starLevel].policeSpeed;
+
+                    float spawnX = characterStats.gameObject.transform.position.x - (police.moveSpeed * starLevels[starLevel].warningTime);
+                    police.gameObject.transform.position = new Vector3(spawnX, police.gameObject.transform.position.y, police.gameObject.transform.position.z);
+                }
+
+                nextTime = starLevels[starLevel].patrolInterval + Time.time;
+            }
+
+            yield return new WaitForEndOfFrame();
         }
     }
 }
