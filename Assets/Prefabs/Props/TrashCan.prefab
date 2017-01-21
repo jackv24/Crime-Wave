@@ -23,7 +23,7 @@ GameObject:
   - 61: {fileID: 61000012644712586}
   - 50: {fileID: 50000011073922662}
   - 114: {fileID: 114000010705669758}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: TrashCan
   m_TagString: Damageable
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 4000010533824774}
   - 198: {fileID: 198000011528689270}
   - 199: {fileID: 199000010071403768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,9 +120,6 @@ MonoBehaviour:
   explosionRadius: 1
   explosionForce: 2
   maxTorque: 10
-  destructionLayer:
-    serializedVersion: 2
-    m_Bits: 1024
   cameraShake: 0.4
 --- !u!198 &198000011528689270
 ParticleSystem:

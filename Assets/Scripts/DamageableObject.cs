@@ -8,7 +8,6 @@ public class DamageableObject : MonoBehaviour
     public float explosionRadius = 2f;
     public float explosionForce = 5f;
     public float maxTorque = 45f;
-    public LayerMask destructionLayer;
 
     public float cameraShake = 2f;
 
@@ -27,7 +26,7 @@ public class DamageableObject : MonoBehaviour
 
         Destroy(particleEffect.gameObject, particleEffect.duration);
 
-        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, explosionRadius, destructionLayer);
+        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
         foreach (Collider2D col in cols)
         {
