@@ -62,6 +62,7 @@ public class CharacterMove : MonoBehaviour
 
     [Space()]
     public LayerMask groundLayer;
+    public LayerMask ceilingLayer;
 
     private Collider2D col;
     private Rect box;
@@ -151,7 +152,7 @@ public class CharacterMove : MonoBehaviour
                 Vector2 origin = Vector2.Lerp(startPoint, endPoint, i / (float)(verticalRays - 1));
 
                 //Cast ray
-                hits[i] = Physics2D.Raycast(origin, (velocity.y > 0 ? Vector2.up : Vector2.down), distance, groundLayer);
+                hits[i] = Physics2D.Raycast(origin, (velocity.y > 0 ? Vector2.up : Vector2.down), distance, (velocity.y > 0 ? ceilingLayer : groundLayer));
 
                 Debug.DrawLine(origin, new Vector2(origin.x, origin.y + Mathf.Sign(velocity.y) * distance));
 

@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CharacterStats : MonoBehaviour
 {
+    public int maxStars = 5;
+    public int currentStars = 0;
+
     [HideInInspector]
     public bool inHideRegion = false;
     [HideInInspector]
