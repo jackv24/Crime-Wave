@@ -11,9 +11,15 @@ public class CameraFollow : MonoBehaviour
     private Vector3 initialPos;
     private float oldXPos = 0;
 
+    private float initialSize;
+
+    private Camera cam;
+
     void Start()
     {
         initialPos = transform.position;
+
+        cam = GetComponent<Camera>();
 
         //If there is no target assigned, try and find one
         if(!target)
@@ -25,6 +31,8 @@ public class CameraFollow : MonoBehaviour
             if (player)
                 target = player.transform;
         }
+
+        initialSize = cam.orthographicSize;
     }
 
     void LateUpdate()
@@ -46,11 +54,39 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    void CameraShake(float amount)
+    void CameraShake(float shakeAmount)
     {
         Vector2 dir = new Vector2(Random.Range(-1, 1f), Random.Range(-1, 1f));
         dir.Normalize();
 
-        transform.position += (Vector3)(dir * amount);
+        cam.orthographicSize += 0.1f;
+
+        transform.position += (Vector3)(dir * shakeAmount);
+
+        StartCoroutine("ScreenZoom");
+    }
+
+    IEnumerator ScreenZoom()
+    {
+        float duration = 0.1f;
+        float timeElapsed = 0f;
+
+        while (timeElapsed <= duration)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, cam.orthographicSize - 0.05f, timeElapsed / duration);
+
+            yield return new WaitForEndOfFrame();
+            timeElapsed += Time.deltaTime;
+        }
+
+        timeElapsed = 0;
+
+        while (timeElapsed <= duration)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, initialSize, timeElapsed / duration);
+
+            yield return new WaitForEndOfFrame();
+            timeElapsed += Time.deltaTime;
+        }
     }
 }
