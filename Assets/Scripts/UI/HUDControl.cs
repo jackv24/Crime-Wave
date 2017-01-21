@@ -14,13 +14,16 @@ public class HUDControl : MonoBehaviour
 
     private List<Image> starImages = new List<Image>();
 
+    public Text respectText;
+    private string respectTextString;
+
     void Start()
     {
         starImages.Add(starImage.GetComponent<Image>());
 
         if(statsTarget)
         {
-            for (int i = 1; i < statsTarget.maxStars; i++)
+            for (int i = 1; i < GameManager.Instance.starLevels.Length; i++)
             {
                 GameObject obj = (GameObject)Instantiate(starImage, starImage.transform.parent);
 
@@ -30,13 +33,24 @@ public class HUDControl : MonoBehaviour
 
         UpdateStars();
 
-        statsTarget.OnStarLevelChange += UpdateStars;
+        GameManager.Instance.OnStarLevelChange += UpdateStars;
+
+        if (respectText)
+        {
+            respectTextString = respectText.text;
+            respectText.text = string.Format(respectTextString, statsTarget.respect);
+
+            statsTarget.OnRespectChange += delegate (int value)
+            {
+                respectText.text = string.Format(respectTextString, value);
+            };
+        }
     }
 
     public void UpdateStars()
     {
-        int maxStars = statsTarget.maxStars;
-        int stars = statsTarget.currentStars;
+        int maxStars = GameManager.Instance.starLevels.Length;
+        int stars = GameManager.Instance.starLevel;
 
         for(int i = 0; i < maxStars; i++)
         {

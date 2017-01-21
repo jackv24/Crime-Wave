@@ -10,10 +10,12 @@ public class CharacterAttack : MonoBehaviour
     public float explosionForce = 10f;
 
     private CharacterAnimator characterAnimator;
+    private CharacterStats characterStats;
 
     void Awake()
     {
         characterAnimator = GetComponent<CharacterAnimator>();
+        characterStats = GetComponent<CharacterStats>();
     }
 
     public void Attack(float direction)
@@ -29,7 +31,7 @@ public class CharacterAttack : MonoBehaviour
                 DamageableObject o = col.GetComponent<DamageableObject>();
 
                 if (o)
-                    o.Destroy(dir.x);
+                    o.Destroy(dir.x, characterStats);
             }
         }
 

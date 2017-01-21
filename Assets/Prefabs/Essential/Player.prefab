@@ -219,6 +219,8 @@ MonoBehaviour:
   currentStars: 0
   inHideRegion: 0
   isHidden: 0
+  respect: 0
+  respectThresholds: 4b00000096000000e10000002c01000077010000
 --- !u!114 &114000010392070956
 MonoBehaviour:
   m_ObjectHideFlags: 1

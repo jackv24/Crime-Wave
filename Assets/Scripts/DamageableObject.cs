@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DamageableObject : MonoBehaviour
 {
+    public int respectValue = 10;
+
     public ParticleSystem particleEffect;
 
     public float explosionRadius = 2f;
@@ -11,7 +13,7 @@ public class DamageableObject : MonoBehaviour
 
     public float cameraShake = 2f;
 
-    public void Destroy(float direction)
+    public void Destroy(float direction, CharacterStats stats)
     {
         particleEffect.transform.SetParent(null);
 
@@ -40,6 +42,8 @@ public class DamageableObject : MonoBehaviour
                 body.AddTorque(Random.Range(-maxTorque, maxTorque), ForceMode2D.Impulse);
             }
         }
+
+        stats.AddRespect(respectValue);
 
         Destroy(gameObject);
     }

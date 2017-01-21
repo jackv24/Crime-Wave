@@ -3,34 +3,21 @@ using System.Collections;
 
 public class CharacterStats : MonoBehaviour
 {
-    public delegate void NormalEvent();
-
-    public event NormalEvent OnStarLevelChange;
-
-    public int maxStars = 5;
-    public int currentStars = 0;
+    public delegate void IntEvent(int value);
+    public event IntEvent OnRespectChange;
 
     [HideInInspector]
     public bool inHideRegion = false;
     [HideInInspector]
     public bool isHidden = false;
 
+    public int respect = 0;
+
     private CharacterAnimator characterAnimator;
 
     void Awake()
     {
         characterAnimator = GetComponent<CharacterAnimator>();
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            currentStars++;
-
-            if (OnStarLevelChange != null)
-                OnStarLevelChange();
-        }
     }
 
     public void Hide()
@@ -40,6 +27,8 @@ public class CharacterStats : MonoBehaviour
             isHidden = true;
 
             characterAnimator.SetHidden(true);
+
+            GameManager.Instance.RemoveStar();
         }
     }
 
@@ -51,5 +40,13 @@ public class CharacterStats : MonoBehaviour
 
             characterAnimator.SetHidden(false);
         }
+    }
+
+    public void AddRespect(int amount)
+    {
+        respect += amount;
+
+        if (OnRespectChange != null)
+            OnRespectChange(respect);
     }
 }
