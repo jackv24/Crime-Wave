@@ -13,11 +13,18 @@ public class CharacterStats : MonoBehaviour
 
     public int respect = 0;
 
+    public GameObject hidePrompt;
+
     private CharacterAnimator characterAnimator;
 
     void Awake()
     {
         characterAnimator = GetComponent<CharacterAnimator>();
+    }
+
+    void Start()
+    {
+        hidePrompt.SetActive(false);
     }
 
     public void Hide()
@@ -46,5 +53,10 @@ public class CharacterStats : MonoBehaviour
 
         if (OnRespectChange != null)
             OnRespectChange(respect);
+    }
+
+    public void ShowPrompt(bool value)
+    {
+        hidePrompt.SetActive(value);
     }
 }

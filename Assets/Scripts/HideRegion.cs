@@ -12,6 +12,8 @@ public class HideRegion : MonoBehaviour
         if(stats)
         {
             stats.inHideRegion = true;
+
+            stats.ShowPrompt(true);
         }
     }
 
@@ -21,6 +23,7 @@ public class HideRegion : MonoBehaviour
         {
             stats.inHideRegion = false;
 
+            stats.ShowPrompt(false);
 
             stats = null;
         }

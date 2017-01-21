@@ -54,9 +54,9 @@ public class PlayerInput : MonoBehaviour
 
         if(characterStats)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || device.DPadUp.WasPressed)
+            if (Input.GetKeyDown(KeyCode.B) || device.Action2.WasPressed)
                 characterStats.Hide();
-            else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || device.DPadUp.WasReleased)
+            else if (Input.GetKeyUp(KeyCode.B) || device.Action2.WasReleased)
                 characterStats.UnHide();
         }
     }
