@@ -391,9 +391,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  catchCircleOrigin: {x: 3, y: 1}
-  catchCircleRadius: 2.75
+  catchCircleOrigin: {x: 6.37, y: 1}
+  catchCircleRadius: 2.6
   destroyAtPlayerDistance: 100
+  player: {fileID: 0}
 --- !u!212 &212000011270624252
 SpriteRenderer:
   m_ObjectHideFlags: 1

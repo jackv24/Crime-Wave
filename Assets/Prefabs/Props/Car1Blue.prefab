@@ -40,6 +40,7 @@ GameObject:
   - 61: {fileID: 61000013264422584}
   - 50: {fileID: 50000012676829996}
   - 114: {fileID: 114000012779220550}
+  - 61: {fileID: 61000011069680864}
   m_Layer: 8
   m_Name: Car1Blue
   m_TagString: Damageable
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013088258440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.5, y: 1.23, z: 0}
+  m_LocalPosition: {x: -4.8, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011889465488}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.32, z: 0}
+  m_LocalPosition: {x: 0, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_Children: []
@@ -82,15 +83,29 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013088258440}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10.37
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000011069680864
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013088258440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 2.2552886, y: -0.28151608}
+  serializedVersion: 2
+  m_Size: {x: 2.3091955, y: 0.99370766}
 --- !u!61 &61000013264422584
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -102,9 +117,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.025390625, y: -0.23313475}
+  m_Offset: {x: -1.0554979, y: 0.20728493}
   serializedVersion: 2
-  m_Size: {x: 6.902862, y: 1.8997021}
+  m_Size: {x: 4.3050437, y: 1.9713097}
 --- !u!114 &114000012779220550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,18 +133,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respectValue: 30
   particleEffect: {fileID: 198000010280264206}
-  brokenVersion: {fileID: 0}
+  brokenVersion: {fileID: 1000011853468636, guid: 2a78a0bbccbdda74abae0b8953931e93,
+    type: 2}
+  breakSoundSource: {fileID: 0}
+  minPitchBend: -0.1
+  maxPitchBend: 0.1
   explosionRadius: 2
   explosionForce: 1
   maxTorque: 10
-  cameraShake: 0.8
+  cameraShake: 0.3
 --- !u!198 &198000010280264206
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011889465488}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -167,13 +186,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 815706944
   looping: 0
   prewarm: 0
   playOnAwake: 0
   moveWithTransform: 1
-  autoRandomSeed: 0
   scalingMode: 1
-  randomSeed: 815706944
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -335,11 +353,11 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor: {r: 0.4745098, g: 0.48235294, b: 0.4862745, a: 1}
-      maxColor: {r: 0.007843138, g: 0.15294118, b: 0.30980393, a: 1}
+      minColor: {r: 0.023529412, g: 0.40784314, b: 0.6039216, a: 1}
+      maxColor: {r: 0.003921569, g: 0.105882354, b: 0.21176471, a: 1}
       minMaxState: 2
     startSize:
-      scalar: 0.5
+      scalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -355,7 +373,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.2
+          value: 0.3333333
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -540,8 +558,8 @@ ParticleSystem:
     radius: 0.5
     angle: 25
     length: 5
-    boxX: 1.6
-    boxY: 5.6864424
+    boxX: 1.5
+    boxY: 6.52
     boxZ: 1
     arc: 180
     placementMode: 0
