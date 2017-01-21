@@ -29,7 +29,8 @@ public class PoliceCar : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+        if(GameManager.Instance.isGameRunning)
+            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
         if(Vector2.Distance((Vector2)transform.position + catchCircleOrigin, player.position) <= catchCircleRadius)
         {

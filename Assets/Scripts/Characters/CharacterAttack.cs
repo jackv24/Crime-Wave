@@ -6,6 +6,8 @@ public class CharacterAttack : MonoBehaviour
     public float attackRadius = 2f;
     public Vector2 attackOffset = Vector2.right;
 
+    public float damageDelay = 0.1f;
+
     public float explosionForce = 10f;
 
     private CharacterAnimator characterAnimator;
@@ -21,9 +23,22 @@ public class CharacterAttack : MonoBehaviour
 
     public void Attack(float direction)
     {
+         if (characterAnimator)
+            characterAnimator.Attack();
+
+        if (characterSound)
+            characterSound.PlayRandomAttack();
+
+        StartCoroutine("DelayAttack", direction);
+    }
+
+    IEnumerator DelayAttack(float direction)
+    {
+        yield return new WaitForSeconds(damageDelay);
+        
         Collider2D[] colliders = Physics2D.OverlapCircleAll((Vector2)transform.position + new Vector2(attackOffset.x * direction, attackOffset.y), attackRadius);
 
-        foreach(Collider2D col in colliders)
+        foreach (Collider2D col in colliders)
         {
             if (col.tag == "Damageable")
             {
@@ -35,12 +50,6 @@ public class CharacterAttack : MonoBehaviour
                     o.Destroy(dir.x, characterStats);
             }
         }
-
-        if (characterAnimator)
-            characterAnimator.Attack();
-
-        if (characterSound)
-            characterSound.PlayRandomAttack();
     }
 
     void OnDrawGizmosSelected()
