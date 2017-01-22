@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HUDControl : MonoBehaviour
 {
+    public static HUDControl Instance;
+
     public CharacterStats statsTarget;
 
     public GameObject starImage;
@@ -18,6 +20,13 @@ public class HUDControl : MonoBehaviour
     private string respectTextString;
 
     public GameObject arrestedImage;
+
+    public GameObject winObject;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -71,4 +80,8 @@ public class HUDControl : MonoBehaviour
         }
     }
 
+    public void ShowWin()
+    {
+        winObject.SetActive(true);
+    }
 }
