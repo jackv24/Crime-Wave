@@ -15,7 +15,7 @@ public class UIFunctions : MonoBehaviour
 
     void Start()
     {
-        if (buttons.Length > 1)
+        if (buttons.Length > 0)
             buttons[0].Select();
     }
 

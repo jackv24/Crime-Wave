@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameRunning = true;
 
+    public int targetRespect = 3000;
+
     void Awake()
     {
         if (Instance == null)
@@ -68,6 +70,9 @@ public class GameManager : MonoBehaviour
     {
         respectGained += value - oldRespectValue;
         oldRespectValue = value;
+
+        if (value >= targetRespect)
+            HUDControl.Instance.ShowWin();
 
         if(starLevel < starLevels.Length && respectGained >= starLevels[starLevel].respectNeeded)
         {
