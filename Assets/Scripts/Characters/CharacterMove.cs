@@ -100,7 +100,7 @@ public class CharacterMove : MonoBehaviour
 
         //Jumping
         {
-            if (isGrounded)
+            if (isGrounded && velocity.y <= 0)
                 stopJumpTime = Time.time + stopJumpDelay;
 
             //If jump button has been pressed
@@ -112,6 +112,8 @@ public class CharacterMove : MonoBehaviour
                 //If jump button was pressed within a small amount of time after leaving the ground (or still on ground)
                 if (Time.time <= stopJumpTime)
                 {
+                    stopJumpTime = 0;
+
                     //Call jump events
                     if (OnJump != null)
                         OnJump();
