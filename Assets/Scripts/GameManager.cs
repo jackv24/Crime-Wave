@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using InControl;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     public GameObject policeCarPrefab;
 
     private bool firstCarSpawned = false;
+    private int lastLayerOrder = 0;
 
     public float restartGameTime = 5f;
 
@@ -64,6 +66,12 @@ public class GameManager : MonoBehaviour
             StopCoroutine("UpdatePolice");
             StartCoroutine("UpdatePolice", starLevel);
         };
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Cancel") || InputManager.ActiveDevice.Action4.WasPressed)
+            SceneManager.LoadScene(1);
     }
 
     void RespectChange(int value)
@@ -127,6 +135,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(time);
 
             PoliceCar police = ((GameObject)Instantiate(policeCarPrefab, policeCarPrefab.transform.position, policeCarPrefab.transform.localRotation)).GetComponent<PoliceCar>();
+
+            if (firstCarSpawned)
+                police.GetComponent<SpriteRenderer>().sortingOrder = lastLayerOrder + 1;
+
+            lastLayerOrder = police.GetComponent<SpriteRenderer>().sortingOrder;
 
             police.moveSpeed = level.policeSpeed;
 

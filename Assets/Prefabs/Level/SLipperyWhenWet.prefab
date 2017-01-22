@@ -40,7 +40,7 @@ GameObject:
   - 61: {fileID: 61000011191783824}
   - 114: {fileID: 114000011896377890}
   m_Layer: 10
-  m_Name: PedestrianSign
+  m_Name: SLipperyWhenWet
   m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,7 +15,7 @@ public class UIFunctions : MonoBehaviour
 
     void Start()
     {
-        if (buttons.Length > 0)
+        if (buttons.Length >= 0)
             buttons[0].Select();
     }
 
@@ -29,7 +29,7 @@ public class UIFunctions : MonoBehaviour
                 introAnim.SetTrigger("progress");
         }
 
-        if(buttons.Length > 1)
+        if(buttons.Length > 0)
         {
             if (device.DPadRight.WasPressed || device.DPadDown.WasPressed || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S))
                 selectedButton++;
