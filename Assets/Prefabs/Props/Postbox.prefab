@@ -47,6 +47,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013871779322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011086680106}
+  - 82: {fileID: 82000012437483952}
+  m_Layer: 0
+  m_Name: Break Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4000010172786906
 Transform:
   m_ObjectHideFlags: 1
@@ -54,13 +70,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013690716084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.31, y: 1.2654829, z: 0}
+  m_LocalPosition: {x: 430.97348, y: 1.2306938, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013651369288}
+  - {fileID: 4000011086680106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &4000011086680106
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013871779322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -57.41, y: 3.9745169, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010172786906}
+  m_RootOrder: 1
 --- !u!4 &4000013651369288
 Transform:
   m_ObjectHideFlags: 1
@@ -105,6 +135,81 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.014570236}
   serializedVersion: 2
   m_Size: {x: 1.6, y: 2.395112}
+--- !u!82 &82000012437483952
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013871779322}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000010946541042, guid: 081e8e15558acb348a968c03ffe90fb2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9bf74cedac1212743af010097676e0cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000013762474554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,10 +221,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e267c125bf2742242b369fdecb9d13c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respectValue: 15
+  respectValue: 20
   particleEffect: {fileID: 198000013415065914}
   brokenVersion: {fileID: 0}
-  breakSoundSource: {fileID: 0}
+  breakSoundSource: {fileID: 82000012437483952}
   minPitchBend: -0.1
   maxPitchBend: 0.1
   explosionRadius: 2
