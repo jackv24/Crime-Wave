@@ -112,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011658454998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.43, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  catchCircleOrigin: {x: 6.37, y: 1}
-  catchCircleRadius: 2.6
+  catchCircleOrigin: {x: 4.33, y: 1.36}
+  catchCircleRadius: 2.39
   destroyAtPlayerDistance: 100
   player: {fileID: 0}
 --- !u!212 &212000011270624252

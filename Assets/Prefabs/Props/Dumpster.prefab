@@ -40,7 +40,7 @@ GameObject:
   - 61: {fileID: 61000014293925984}
   - 114: {fileID: 114000010847331342}
   - 212: {fileID: 212000012223511002}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HideRegionShaded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +64,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012523228552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012970873346}
+  - 82: {fileID: 82000011773950920}
+  m_Layer: 0
+  m_Name: Break Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4000012253716728
 Transform:
   m_ObjectHideFlags: 1
@@ -77,6 +93,7 @@ Transform:
   m_Children:
   - {fileID: 4000012554684846}
   - {fileID: 4000013843042430}
+  - {fileID: 4000012970873346}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000012554684846
@@ -92,6 +109,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012253716728}
   m_RootOrder: 0
+--- !u!4 &4000012970873346
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012523228552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6600008, y: 3.73418, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012253716728}
+  m_RootOrder: 2
 --- !u!4 &4000013843042430
 Transform:
   m_ObjectHideFlags: 1
@@ -133,6 +163,81 @@ BoxCollider2D:
   m_Offset: {x: -0.086137295, y: -0.014223093}
   serializedVersion: 2
   m_Size: {x: 1.1721661, y: 2.9990869}
+--- !u!82 &82000011773950920
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012523228552}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000010946541042, guid: 081e8e15558acb348a968c03ffe90fb2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9bf74cedac1212743af010097676e0cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010092483698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,15 +251,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respectValue: 10
   particleEffect: {fileID: 198000013139148418}
-  brokenVersion: {fileID: 1000010361922156, guid: 251b7e118ef08a040812b17963f6ef84,
-    type: 2}
-  breakSoundSource: {fileID: 0}
+  brokenVersion: {fileID: 0}
+  breakSoundSource: {fileID: 82000011773950920}
   minPitchBend: -0.1
   maxPitchBend: 0.1
   explosionRadius: 2
   explosionForce: 5
   maxTorque: 45
-  cameraShake: 0.5
+  cameraShake: 0.1
 --- !u!114 &114000010847331342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +486,7 @@ ParticleSystem:
       maxColor: {r: 0.654902, g: 0.654902, b: 0.654902, a: 1}
       minMaxState: 2
     startSize:
-      scalar: 0.3
+      scalar: 0.6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -398,7 +502,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.3333333
+          value: 0.5
           inSlope: 0
           outSlope: 0
           tangentMode: 0
