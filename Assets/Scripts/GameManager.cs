@@ -68,12 +68,6 @@ public class GameManager : MonoBehaviour
         };
     }
 
-    void Update()
-    {
-        if (Input.GetButtonDown("Cancel") || InputManager.ActiveDevice.Action4.WasPressed)
-            SceneManager.LoadScene(1);
-    }
-
     void RespectChange(int value)
     {
         respectGained += value - oldRespectValue;
