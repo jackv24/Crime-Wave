@@ -110,7 +110,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator UpdatePolice(int star)
     {
-        StarLevels level = starLevels[star];
+        if (star <= 0)
+            yield return null;
+
+        StarLevels level = starLevels[star - 1];
 
         while (true)
         {
@@ -120,9 +123,9 @@ public class GameManager : MonoBehaviour
 
             PoliceCar police = ((GameObject)Instantiate(policeCarPrefab, policeCarPrefab.transform.position, policeCarPrefab.transform.localRotation)).GetComponent<PoliceCar>();
 
-            police.moveSpeed = starLevels[starLevel].policeSpeed;
+            police.moveSpeed = level.policeSpeed;
 
-            float spawnX = characterStats.gameObject.transform.position.x - (police.moveSpeed * starLevels[starLevel].warningTime);
+            float spawnX = characterStats.gameObject.transform.position.x - (police.moveSpeed * level.warningTime);
             police.gameObject.transform.position = new Vector3(spawnX, police.gameObject.transform.position.y, police.gameObject.transform.position.z);
 
             firstCarSpawned = true;
