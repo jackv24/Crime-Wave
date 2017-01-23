@@ -46,6 +46,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013571735078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012903245612}
+  - 82: {fileID: 82000013393225232}
+  m_Layer: 0
+  m_Name: 'Break Sound '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4000011579985292
 Transform:
   m_ObjectHideFlags: 1
@@ -59,6 +75,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013091469206}
   m_RootOrder: 0
+--- !u!4 &4000012903245612
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013571735078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.04, y: 0.57682335, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013091469206}
+  m_RootOrder: 1
 --- !u!4 &4000013091469206
 Transform:
   m_ObjectHideFlags: 1
@@ -66,11 +95,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011610320044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88, z: 0}
+  m_LocalPosition: {x: -5.88, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011579985292}
+  - {fileID: 4000012903245612}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!61 &61000010355148182
@@ -84,9 +114,84 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.011725545, y: -0.34006017}
+  m_Offset: {x: -0.005745411, y: -0.14872265}
   serializedVersion: 2
-  m_Size: {x: 3.499645, y: 0.8698795}
+  m_Size: {x: 3.726858, y: 1.2525547}
+--- !u!82 &82000013393225232
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013571735078}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000010946541042, guid: 081e8e15558acb348a968c03ffe90fb2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9bf74cedac1212743af010097676e0cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000013306070296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +206,9 @@ MonoBehaviour:
   respectValue: 20
   particleEffect: {fileID: 198000013492649914}
   brokenVersion: {fileID: 0}
+  breakSoundSource: {fileID: 82000013393225232}
+  minPitchBend: -0.1
+  maxPitchBend: 0.1
   explosionRadius: 1
   explosionForce: 2
   maxTorque: 10
@@ -320,7 +428,7 @@ ParticleSystem:
       maxColor: {r: 0.79607844, g: 0.58431375, b: 0.39607844, a: 1}
       minMaxState: 2
     startSize:
-      scalar: 0.5
+      scalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -336,7 +444,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0.5
+          value: 0.3333333
           inSlope: 0
           outSlope: 0
           tangentMode: 0

@@ -268,7 +268,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!4 &4000010145666898
 Transform:
   m_ObjectHideFlags: 1
@@ -294,7 +294,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &4000010396433188
 Transform:
   m_ObjectHideFlags: 1
@@ -307,7 +307,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &4000010491410942
 Transform:
   m_ObjectHideFlags: 1
@@ -361,6 +361,7 @@ Transform:
   - {fileID: 4000010145666898}
   - {fileID: 4000010512505504}
   - {fileID: 4000010491410942}
+  - {fileID: 4000013511040946}
   - {fileID: 4000012426613522}
   - {fileID: 4000012534131148}
   - {fileID: 4000010251432440}
@@ -368,7 +369,6 @@ Transform:
   - {fileID: 4000010396433188}
   - {fileID: 4000010031273268}
   - {fileID: 4000013451174960}
-  - {fileID: 4000013511040946}
   - {fileID: 4000012405003112}
   - {fileID: 4000012586531168}
   - {fileID: 4000010620276230}
@@ -386,7 +386,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &4000012405003112
 Transform:
   m_ObjectHideFlags: 1
@@ -412,7 +412,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &4000012534131148
 Transform:
   m_ObjectHideFlags: 1
@@ -425,7 +425,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &4000012586531168
 Transform:
   m_ObjectHideFlags: 1
@@ -451,7 +451,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!4 &4000013511040946
 Transform:
   m_ObjectHideFlags: 1
@@ -464,7 +464,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011824693916}
-  m_RootOrder: 10
+  m_RootOrder: 3
 --- !u!61 &61000010578059742
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -535,7 +535,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300066, guid: f8a34c658f168064f80cd88fa74a59c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -865,7 +865,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300066, guid: f8a34c658f168064f80cd88fa74a59c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
