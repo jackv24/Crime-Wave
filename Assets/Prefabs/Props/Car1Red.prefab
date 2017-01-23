@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1000010668022776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 245.33, y: 0.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010559870134}
@@ -239,7 +239,7 @@ MonoBehaviour:
   respectValue: 40
   particleEffect: {fileID: 198000013728875402}
   brokenVersion: {fileID: 0}
-  breakSoundSource: {fileID: 0}
+  breakSoundSource: {fileID: 82000012800430742}
   minPitchBend: -0.1
   maxPitchBend: 0.1
   explosionRadius: 2

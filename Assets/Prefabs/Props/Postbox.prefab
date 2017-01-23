@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013690716084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 430.97348, y: 1.2306938, z: 0}
+  m_LocalPosition: {x: 13.74, y: 1.2654829, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013871779322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.41, y: 3.9745169, z: 0}
+  m_LocalPosition: {x: 0.21, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -112,7 +112,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013690716084}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -132,9 +132,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.014570236}
+  m_Offset: {x: 0, y: 0.2158184}
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 2.395112}
+  m_Size: {x: 1.6, y: 2.7976084}
 --- !u!82 &82000012437483952
 AudioSource:
   m_ObjectHideFlags: 1
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e267c125bf2742242b369fdecb9d13c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respectValue: 20
+  respectValue: 50
   particleEffect: {fileID: 198000013415065914}
   brokenVersion: {fileID: 0}
   breakSoundSource: {fileID: 82000012437483952}
