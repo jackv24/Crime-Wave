@@ -6007,8 +6007,8 @@ Transform:
   - {fileID: 825863661}
   - {fileID: 1420697537}
   - {fileID: 1796492314}
-  - {fileID: 478243374}
   - {fileID: 1129160035}
+  - {fileID: 478243374}
   - {fileID: 2136842219}
   - {fileID: 236848125}
   - {fileID: 690139588}
@@ -6016,12 +6016,12 @@ Transform:
   - {fileID: 1143150650}
   - {fileID: 2070146628}
   - {fileID: 1144833556}
+  - {fileID: 1156755602}
   - {fileID: 77567869}
   - {fileID: 1740221686}
   - {fileID: 1648725915}
-  - {fileID: 1156755602}
-  - {fileID: 972836567}
   - {fileID: 1976362819}
+  - {fileID: 972836567}
   - {fileID: 567089224}
   - {fileID: 1294380404}
   - {fileID: 1083104258}
@@ -6111,6 +6111,7 @@ Transform:
   - {fileID: 1600295119}
   - {fileID: 1400444977}
   - {fileID: 1257574023}
+  - {fileID: 1492520693}
   - {fileID: 1363118250}
   - {fileID: 1902199340}
   - {fileID: 143877605}
@@ -6191,7 +6192,7 @@ Transform:
   - {fileID: 493777175}
   - {fileID: 200377801}
   - {fileID: 1218900730}
-  - {fileID: 1492520693}
+  - {fileID: 1460758032}
   - {fileID: 1746384641}
   - {fileID: 1140629316}
   - {fileID: 1873914632}
@@ -6211,7 +6212,6 @@ Transform:
   - {fileID: 1724487017}
   - {fileID: 984923440}
   - {fileID: 1538224340}
-  - {fileID: 1460758032}
   - {fileID: 1029407782}
   - {fileID: 835180284}
   - {fileID: 676688636}
@@ -17185,7 +17185,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 354827846}
-  m_RootOrder: 72
+  m_RootOrder: 71
 --- !u!1001 &1133860602
 Prefab:
   m_ObjectHideFlags: 0
@@ -17735,7 +17735,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 354827846}
-  m_RootOrder: 83
+  m_RootOrder: 80
 --- !u!212 &1156755603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20914,32 +20914,46 @@ Prefab:
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012051496914, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 64
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013110439600, guid: a6d577045f6eb6c41aaa2e0fe1af59d9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000013881983458, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011094625528, guid: a6d577045f6eb6c41aaa2e0fe1af59d9,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6d577045f6eb6c41aaa2e0fe1af59d9, type: 2}
@@ -22280,7 +22294,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 354827846}
-  m_RootOrder: 275
+  m_RootOrder: 256
 --- !u!212 &1460758033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23194,7 +23208,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 354827846}
-  m_RootOrder: 255
+  m_RootOrder: 175
 --- !u!212 &1492520694
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30573,7 +30587,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 354827846}
-  m_RootOrder: 85
+  m_RootOrder: 84
 --- !u!212 &1976362820
 SpriteRenderer:
   m_ObjectHideFlags: 0
