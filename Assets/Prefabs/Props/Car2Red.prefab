@@ -56,6 +56,7 @@ GameObject:
   - 61: {fileID: 61000012202767088}
   - 50: {fileID: 50000011615972380}
   - 114: {fileID: 114000011507623826}
+  - 61: {fileID: 61000013650160406}
   m_Layer: 8
   m_Name: Car2Red
   m_TagString: Damageable
@@ -112,7 +113,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014073508222}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -132,9 +133,23 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.0101623535, y: -0.23313475}
+  m_Offset: {x: -1.0498962, y: 0.018844128}
   serializedVersion: 2
-  m_Size: {x: 6.628783, y: 1.8997021}
+  m_Size: {x: 3.7787826, y: 2.4036598}
+--- !u!61 &61000013650160406
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014073508222}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 2.043396, y: -0.55462503}
+  serializedVersion: 2
+  m_Size: {x: 2.562354, y: 1.2567215}
 --- !u!82 &82000010059874206
 AudioSource:
   m_ObjectHideFlags: 1
@@ -224,7 +239,7 @@ MonoBehaviour:
   respectValue: 100
   particleEffect: {fileID: 198000013912637560}
   brokenVersion: {fileID: 0}
-  breakSoundSource: {fileID: 0}
+  breakSoundSource: {fileID: 82000010059874206}
   minPitchBend: -0.1
   maxPitchBend: 0.1
   explosionRadius: 2

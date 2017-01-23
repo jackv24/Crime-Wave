@@ -23,6 +23,7 @@ GameObject:
   - 61: {fileID: 61000013077875104}
   - 50: {fileID: 50000010534835248}
   - 114: {fileID: 114000011868274730}
+  - 61: {fileID: 61000011274270646}
   m_Layer: 8
   m_Name: Car2Black
   m_TagString: Damageable
@@ -112,7 +113,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011748203306}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -121,6 +122,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000011274270646
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011748203306}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 2.069458, y: -0.5286007}
+  serializedVersion: 2
+  m_Size: {x: 2.4493232, y: 1.3087702}
 --- !u!61 &61000013077875104
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -132,9 +147,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 97e1d6eec44e096408db0b2c6ad282de, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.0101623535, y: -0.23313475}
+  m_Offset: {x: -0.9836731, y: -0.0272035}
   serializedVersion: 2
-  m_Size: {x: 6.5678773, y: 1.8997021}
+  m_Size: {x: 3.8281412, y: 2.3115644}
 --- !u!82 &82000011615605216
 AudioSource:
   m_ObjectHideFlags: 1
@@ -224,7 +239,7 @@ MonoBehaviour:
   respectValue: 100
   particleEffect: {fileID: 198000012442899762}
   brokenVersion: {fileID: 0}
-  breakSoundSource: {fileID: 0}
+  breakSoundSource: {fileID: 82000011615605216}
   minPitchBend: -0.1
   maxPitchBend: 0.1
   explosionRadius: 2
