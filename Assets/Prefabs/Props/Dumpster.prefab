@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010307369776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.3, y: 1.5058198, z: 0}
+  m_LocalPosition: {x: 147.28, y: 1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -103,8 +103,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010333911014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: -0.35, z: 0}
-  m_LocalScale: {x: 0.7875003, y: 0.78750074, z: 1}
+  m_LocalPosition: {x: 2.49, y: -0.35, z: 0}
+  m_LocalScale: {x: 1.1517196, y: 0.78750074, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012253716728}
@@ -251,7 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respectValue: 10
   particleEffect: {fileID: 198000013139148418}
-  brokenVersion: {fileID: 0}
+  brokenVersion: {fileID: 1000010361922156, guid: 251b7e118ef08a040812b17963f6ef84,
+    type: 2}
   breakSoundSource: {fileID: 82000011773950920}
   minPitchBend: -0.1
   maxPitchBend: 0.1
@@ -2061,7 +2062,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c3c23333c40681042a97b9227564853e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -2078,7 +2079,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7185d4b3fc0bdb848a7637557ff0ba4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000012992541156
