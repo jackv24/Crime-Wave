@@ -174,10 +174,13 @@ public class CharacterMove : MonoBehaviour
 
     public void Jump(bool pressed)
     {
-        if (pressed)
-            shouldJump = true;
+        if (canMove)
+        {
+            if (pressed)
+                shouldJump = true;
 
-        heldJump = pressed;
+            heldJump = pressed;
+        }
     }
 
     void OnDrawGizmosSelected()

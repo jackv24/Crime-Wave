@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012303182220}
   - 212: {fileID: 212000012932985260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window01_Broken
   m_TagString: Damageable
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011571288890}
   - 212: {fileID: 212000012884946416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crack03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

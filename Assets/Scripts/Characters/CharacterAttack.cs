@@ -23,7 +23,10 @@ public class CharacterAttack : MonoBehaviour
 
     public void Attack(float direction)
     {
-         if (characterAnimator)
+        if (characterStats.isHidden)
+            return;
+
+        if (characterAnimator)
             characterAnimator.Attack();
 
         if (characterSound)

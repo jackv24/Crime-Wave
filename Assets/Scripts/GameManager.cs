@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using InControl;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class GameManager : MonoBehaviour
     public bool isGameRunning = true;
 
     public int targetRespect = 3000;
+
+    public GameObject damageTextPrefab;
+    public AnimationCurve textAnim = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
+    public float animDuration = 1f;
 
     void Awake()
     {
@@ -142,5 +147,31 @@ public class GameManager : MonoBehaviour
 
             firstCarSpawned = true;
         }
+    }
+
+    public void ShowDamageText(int amount, Vector2 worldPos)
+    {
+        GameObject obj = (GameObject)Instantiate(damageTextPrefab, worldPos, Quaternion.identity);
+
+        Text text = obj.GetComponentInChildren<Text>();
+        text.text = string.Format(text.text, amount);
+
+        StartCoroutine("AnimateDamageText", obj.transform);
+    }
+
+    IEnumerator AnimateDamageText(Transform t)
+    {
+        float elapsedTime = 0;
+
+        while(elapsedTime < animDuration)
+        {
+            t.position += Vector3.up * Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+
+            elapsedTime += Time.deltaTime;
+        }
+
+        Destroy(t.gameObject);
     }
 }

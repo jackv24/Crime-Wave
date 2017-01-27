@@ -73,6 +73,8 @@ public class DamageableObject : MonoBehaviour
 
         stats.AddRespect(respectValue);
 
+        GameManager.Instance.ShowDamageText(respectValue, transform.position);
+
         Destroy(gameObject);
     }
 }

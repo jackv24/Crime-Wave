@@ -56,26 +56,45 @@ MonoBehaviour:
   - respectNeeded: 100
     warningTime: 6
     policeSpeed: 8
-    patrolInterval: 10
+    patrolInterval: 20
   - respectNeeded: 300
     warningTime: 4
     policeSpeed: 10
-    patrolInterval: 8
+    patrolInterval: 20
   - respectNeeded: 800
-    warningTime: 2
-    policeSpeed: 14
-    patrolInterval: 7
+    warningTime: 4
+    policeSpeed: 11
+    patrolInterval: 15
   - respectNeeded: 1200
-    warningTime: 2
-    policeSpeed: 16
-    patrolInterval: 6
+    warningTime: 4
+    policeSpeed: 12
+    patrolInterval: 15
   - respectNeeded: 2000
-    warningTime: 2
-    policeSpeed: 18
-    patrolInterval: 5
+    warningTime: 3
+    policeSpeed: 14
+    patrolInterval: 10
   starLevel: 0
   policeCarPrefab: {fileID: 1000011658454998, guid: 791c2ce843838474ea31ef23287f1ecd,
     type: 2}
   restartGameTime: 4
   isGameRunning: 1
   targetRespect: 3000
+  damageTextPrefab: {fileID: 1000013931465698, guid: a641d4df2532a25468cc36c4a16d046e,
+    type: 2}
+  textAnim:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animDuration: 1

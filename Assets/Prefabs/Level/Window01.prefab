@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000011740905762}
   - 198: {fileID: 198000013728177032}
   - 199: {fileID: 199000010599827776}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - 212: {fileID: 212000010984054750}
   - 114: {fileID: 114000011644278076}
   - 61: {fileID: 61000011839106064}
-  m_Layer: 4
+  m_Layer: 10
   m_Name: Window01
   m_TagString: Damageable
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014062517788}
   - 82: {fileID: 82000012611674712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Break Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013642780414}
-  serializedVersion: 2
+  serializedVersion: 4
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -258,12 +258,13 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  randomSeed: 2689351009
   looping: 0
   prewarm: 0
   playOnAwake: 0
   moveWithTransform: 1
+  autoRandomSeed: 0
   scalingMode: 1
+  randomSeed: -1605616287
   InitialModule:
     serializedVersion: 2
     enabled: 1
