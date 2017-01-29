@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011658454998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.681734, y: -0.31606662, z: 0}
+  m_LocalPosition: {x: 0, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -217,7 +217,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010287245024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 28.07, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -242,8 +242,8 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 50
+  MinDistance: 27.676428
+  MaxDistance: 30.672415
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -317,8 +317,8 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 15
+  MinDistance: 3.6440687
+  MaxDistance: 11.689526
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -555,8 +555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  catchCircleOrigin: {x: 4.61, y: 1.31}
-  catchCircleRadius: 2.67
+  catchCircleOrigin: {x: 5.36, y: 0.16}
+  catchCircleRadius: 2.4
   destroyAtPlayerDistance: 100
   player: {fileID: 0}
 --- !u!212 &212000011270624252
