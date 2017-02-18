@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(respectGained >= targetRespect ? 0 : SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator UpdatePolice(int star)

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PlayerInput : MonoBehaviour
     {
         //Get active controller from input manager
         device = InputManager.ActiveDevice;
+
+        if (device.Action1.IsPressed && device.Action2.IsPressed && device.Action3.IsPressed && device.Action4.IsPressed)
+            SceneManager.LoadScene(0);
 
         if(characterMove)
         {
